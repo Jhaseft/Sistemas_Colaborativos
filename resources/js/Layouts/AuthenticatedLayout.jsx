@@ -30,6 +30,13 @@ export default function AuthenticatedLayout({ header, children }) {
                                 >
                                     Dashboard
                                 </NavLink>
+
+                                 <NavLink
+                                    href={route('chat')}
+                                    active={route().current('chat')}
+                                >
+                                    Chat en tiempo real
+                                </NavLink>
                             </div>
                         </div>
 

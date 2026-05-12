@@ -15,7 +15,10 @@ export default function Chat() {
         const ws = new WebSocket('ws://localhost:8080');
         wsRef.current = ws;
 
-        ws.onopen = () => setStatus('Conectado al servidor');
+        ws.onopen = () => {
+            setStatus('Conectado al servidor');
+            ws.send(JSON.stringify({ type: 'join', user: userName }));
+        };
         ws.onclose = () => setStatus('Desconectado');
         ws.onerror = () => setStatus('Error de conexión');
         ws.onmessage = (event) => {
@@ -69,12 +72,18 @@ export default function Chat() {
                                 {messages.length === 0 && (
                                     <p className="text-sm text-gray-500">Aún no hay mensajes.</p>
                                 )}
-                                {messages.map((m, i) => (
-                                    <div key={i} className="mb-1 text-sm">
-                                        <span className="text-gray-400">[{formatTime(m.time)}]</span>{' '}
-                                        <span className="font-semibold">{m.user}:</span> {m.text}
-                                    </div>
-                                ))}
+                                {messages.map((m, i) =>
+                                    m.type === 'system' ? (
+                                        <div key={i} className="mb-1 text-center text-xs italic text-gray-400">
+                                            {m.text}
+                                        </div>
+                                    ) : (
+                                        <div key={i} className="mb-1 text-sm">
+                                            <span className="text-gray-400">[{formatTime(m.time)}]</span>{' '}
+                                            <span className="font-semibold">{m.user}:</span> {m.text}
+                                        </div>
+                                    )
+                                )}
                             </div>
 
                             <form onSubmit={sendMessage} className="mt-4 flex gap-2">
