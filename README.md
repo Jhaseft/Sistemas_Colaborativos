@@ -8,6 +8,7 @@ Sistema colaborativo construido con **Laravel 13 + React 18 + Vite**, usando Ine
 - Gael Olker Villarroel Sanchez - Usuario GitHub: 202403325-prog
 - Jhaseft Rene Saat Solares - Usuario Github Jhaseft
 - Julio Elias Alba Urquieta - Usuario GitHub: elias-alba
+- Pablo Arturo Torrico Lazarte - Usuario GitHub: PabloArturo77
 
 ---
 
