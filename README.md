@@ -2,6 +2,12 @@
 
 Sistema colaborativo construido con **Laravel 13 + React 18 + Vite**, usando Inertia.js como puente entre el backend y el frontend.
 
+
+## Integrantes del equipo
+
+- Gael Olker Villarroel Sanchez - Usuario GitHub: 202403325-prog
+- Jhaseft Rene Saat Solares - Usuario Github Jhaseft
+
 ---
 
 ## Stack tecnológico
@@ -157,7 +163,3 @@ composer test
 MIT
 ---
 
-## Integrantes del equipo
-
-- Gael Olker Villarroel Sanchez - Usuario GitHub: 202403325-prog
-- Jhaseft Rene Saat Solares - Usuario Github Jhaseft
