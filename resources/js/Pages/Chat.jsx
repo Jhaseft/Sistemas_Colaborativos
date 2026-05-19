@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function Chat() {
     const { auth } = usePage().props;
-    const userName = auth?.user?.name || 'Anónimo';
+    const userName = auth?.user?.name || auth?.guest_name || 'Anónimo';
 
     const [messages, setMessages] = useState([]);
     const [text, setText] = useState('');

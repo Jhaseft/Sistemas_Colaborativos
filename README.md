@@ -108,19 +108,6 @@ El servidor de chat usa WebSockets nativos. Para levantarlo por separado:
 ```bash
 npm run chat
 ```
-
----
-
-## Variables de entorno clave
-
-| Variable | Descripción |
-|----------|-------------|
-| `APP_KEY` | Clave de cifrado de la app (generada con `artisan key:generate`) |
-| `APP_URL` | URL base de la aplicación |
-| `DB_CONNECTION` | Motor de base de datos (`sqlite` por defecto) |
-| `DB_DATABASE` | Ruta al archivo SQLite o nombre de la BD |
-| `SESSION_DRIVER` | Driver de sesiones (`database` por defecto) |
-
 ---
 
 ## Comandos útiles
